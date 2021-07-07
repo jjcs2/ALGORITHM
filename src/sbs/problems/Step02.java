@@ -26,7 +26,7 @@ public class Step02 {
         //9498. 시험성적 
         //Scanner sc = new Scanner(System.in);
         int sco = sc.nextInt();
-        sc.close();
+        //sc.close();
         
         if(sco >= 90){
             System.out.println("A");
@@ -39,7 +39,30 @@ public class Step02 {
         } else {
             System.out.println("F");
         }
+        
+        
+        //2753. 윤년
+        //Scanner sc = new Scanner(System.in);
+        int year = sc.nextInt();
+        sc.close();
+        
+        if(year%4 == 0){
+            if(year%400 == 0){
+                System.out.println("1");
+            } else if(year%100 == 0){
+                System.out.println("0");
+            } else {
+                System.out.println("1");
+            }  
+        } else {
+            System.out.println("0");
+        }
 		
+        if(year%4 == 0 && (year%100 != 0 || year%400 == 0)) {
+        	System.out.println("1");
+        } else {
+        	System.out.println("0");
+        }
 		
 
 	}
