@@ -44,7 +44,7 @@ public class Step02 {
         //2753. 윤년
         //Scanner sc = new Scanner(System.in);
         int year = sc.nextInt();
-        sc.close();
+        //sc.close();
         
         if(year%4 == 0){
             if(year%400 == 0){
@@ -82,6 +82,25 @@ public class Step02 {
             System.out.println("4");
         }
 		
+        
+        //2884. 알람 시계
+        //Scanner sc = new Scanner(System.in);
+		
+		int H = sc.nextInt(); // 시간
+		int M = sc.nextInt(); // 분
+		sc.close();
+		
+		if(M < 45) {
+			H--;		
+			M = 60 - (45 - M);
+			if(H < 0) {
+				H = 23;
+			}
+			System.out.println(H + " " + M);
+		}
+		else {
+			System.out.println(H + " " + (M - 45));
+		}
 
 	}
 
